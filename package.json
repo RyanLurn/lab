@@ -3,8 +3,12 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "check-types": "bun run --parallel --workspaces --if-present --no-exit-on-error check-types",
+    "lint": "bun run --parallel --workspaces --if-present --no-exit-on-error lint",
+    "lint:fix": "bun run --parallel --workspaces --if-present --no-exit-on-error lint:fix",
     "format": "bunx prettier . --write --cache",
-    "format:check": "bunx prettier . --check --cache"
+    "format:check": "bunx prettier . --check --cache",
+    "check": "bun run check-types && bun run lint && bun run format:check"
   },
   "workspaces": {
     "packages": [
