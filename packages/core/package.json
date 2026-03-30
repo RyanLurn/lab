@@ -2,6 +2,17 @@
   "name": "@lab/core",
   "type": "module",
   "private": "true",
+  "scripts": {
+    "check-types": "bunx tsc --noEmit",
+    "lint": "bunx eslint --cache",
+    "lint:fix": "bunx eslint --cache --fix",
+    "check": "bun run check-types && bun run lint"
+  },
+  "exports": {
+    "./types/*": {
+      "types": "./src/types/*.ts"
+    }
+  },
   "devDependencies": {
     "@lab/eslint": "workspace:*",
     "@lab/typescript": "workspace:*",
