@@ -35,6 +35,16 @@
         "typescript": "catalog:",
       },
     },
+    "packages/js-runtime": {
+      "name": "@lab/js-runtime",
+      "devDependencies": {
+        "@lab/eslint": "workspace:*",
+        "@lab/typescript": "workspace:*",
+        "@types/bun": "catalog:types",
+        "eslint": "catalog:",
+        "typescript": "catalog:",
+      },
+    },
   },
   "catalog": {
     "eslint": "^10.1.0",
@@ -73,6 +83,8 @@
     "@lab/core": ["@lab/core@workspace:packages/core"],
 
     "@lab/eslint": ["@lab/eslint@workspace:configs/eslint"],
+
+    "@lab/js-runtime": ["@lab/js-runtime@workspace:packages/js-runtime"],
 
     "@lab/typescript": ["@lab/typescript@workspace:configs/typescript"],
 
