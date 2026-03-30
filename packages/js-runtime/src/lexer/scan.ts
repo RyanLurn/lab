@@ -4,6 +4,6 @@ export function scan(sourceText: string) {
   const characters = stripBOM(sourceText).split("");
 
   for (const character of characters) {
-    console.log(character);
+    console.write(character);
   }
 }
