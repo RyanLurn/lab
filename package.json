@@ -2,6 +2,10 @@
   "name": "lab",
   "type": "module",
   "private": true,
+  "scripts": {
+    "format": "bunx prettier . --write --cache",
+    "format:check": "bunx prettier . --check --cache"
+  },
   "workspaces": {
     "packages": [
       "apps/*",
