@@ -1,0 +1,5 @@
+{
+  "name": "@lab/typescript",
+  "type": "module",
+  "private": true
+}
