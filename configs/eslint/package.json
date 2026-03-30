@@ -1,0 +1,21 @@
+{
+  "name": "@lab/eslint",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check-types": "bunx tsc --noEmit",
+    "lint": "bunx eslint --cache",
+    "lint:fix": "bunx eslint --cache --fix",
+    "check": "bun run check-types && bun run lint"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@lab/typescript": "workspace:*",
+    "eslint": "catalog:",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-perfectionist": "^5.7.0",
+    "globals": "^17.4.0",
+    "typescript": "catalog:",
+    "typescript-eslint": "^8.57.2"
+  }
+}
