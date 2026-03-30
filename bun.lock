@@ -25,6 +25,16 @@
     "configs/typescript": {
       "name": "@lab/typescript",
     },
+    "packages/core": {
+      "name": "@lab/core",
+      "devDependencies": {
+        "@lab/eslint": "workspace:*",
+        "@lab/typescript": "workspace:*",
+        "@types/bun": "catalog:types",
+        "eslint": "catalog:",
+        "typescript": "catalog:",
+      },
+    },
   },
   "catalog": {
     "eslint": "^10.1.0",
@@ -59,6 +69,8 @@
     "@humanwhocodes/module-importer": ["@humanwhocodes/module-importer@1.0.1", "", {}, "sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA=="],
 
     "@humanwhocodes/retry": ["@humanwhocodes/retry@0.4.3", "", {}, "sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ=="],
+
+    "@lab/core": ["@lab/core@workspace:packages/core"],
 
     "@lab/eslint": ["@lab/eslint@workspace:configs/eslint"],
 

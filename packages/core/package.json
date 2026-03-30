@@ -1,0 +1,12 @@
+{
+  "name": "@lab/core",
+  "type": "module",
+  "private": "true",
+  "devDependencies": {
+    "@lab/eslint": "workspace:*",
+    "@lab/typescript": "workspace:*",
+    "@types/bun": "catalog:types",
+    "eslint": "catalog:",
+    "typescript": "catalog:"
+  }
+}
