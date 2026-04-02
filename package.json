@@ -9,6 +9,7 @@
     "format": "bunx prettier . --write --cache",
     "format:check": "bunx prettier . --check --cache",
     "check": "bun run check-types && bun run lint && bun run format:check",
+    "core:build": "bun --filter @lab/core build --log-level error",
     "ui:build": "bun --filter @lab/ui build --log-level error"
   },
   "workspaces": {
