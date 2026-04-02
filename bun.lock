@@ -12,6 +12,7 @@
     "axon/client": {
       "name": "@lab/axon-client",
       "dependencies": {
+        "@lab/core": "workspace:*",
         "@lab/ui": "workspace:*",
         "@tanstack/react-router": "catalog:",
         "lucide-react": "catalog:ui",

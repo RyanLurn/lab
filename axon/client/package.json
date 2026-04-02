@@ -10,6 +10,7 @@
     "check": "bun run check-types && bun run lint"
   },
   "dependencies": {
+    "@lab/core": "workspace:*",
     "@lab/ui": "workspace:*",
     "@tanstack/react-router": "catalog:",
     "lucide-react": "catalog:ui",
