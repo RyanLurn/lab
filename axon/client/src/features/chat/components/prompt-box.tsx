@@ -1,13 +1,16 @@
 import { Textarea } from "@lab/ui/components/textarea";
-import { toast } from "@lab/ui/components/toaster";
 import { useState } from "react";
 
-export function PromptBox() {
+export function PromptBox({
+  sendUserMessage,
+}: {
+  sendUserMessage: (prompt: string) => void;
+}) {
   const [prompt, setPrompt] = useState("");
 
   function send() {
     if (prompt.trim()) {
-      toast.info("Sent message.");
+      sendUserMessage(prompt);
       setPrompt("");
     }
   }
@@ -20,7 +23,7 @@ export function PromptBox() {
         }
       }}
       onChange={(e) => setPrompt(e.target.value)}
-      className="w-full"
+      className="sticky bottom-5 mt-15 w-full"
       value={prompt}
     />
   );

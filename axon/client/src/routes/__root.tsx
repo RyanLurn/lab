@@ -9,8 +9,10 @@ function RootLayout() {
   return (
     <ThemeProvider>
       <Toaster position="top-center" closeButton richColors />
-      <Outlet />
-      <ModeToggle className="fixed top-3 right-3 z-50" />
+      <div className="flex h-dvh flex-col items-center">
+        <Outlet />
+      </div>
+      <ModeToggle className="fixed top-4 right-4 z-50" />
     </ThemeProvider>
   );
 }

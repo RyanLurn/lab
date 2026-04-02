@@ -6,11 +6,11 @@ export function MessageBubble({ content, role }: ChatMessage) {
   return (
     <div
       className={cn(
-        "w-full max-w-4/5 rounded-md bg-secondary",
-        role === "user" ? "self-end" : ""
+        "w-full max-w-4/5 rounded-md bg-secondary p-4 text-secondary-foreground",
+        role === "user" ? "self-end bg-primary text-primary-foreground" : ""
       )}
     >
-      <p className="text-secondary-foreground">{content}</p>
+      <p>{content}</p>
     </div>
   );
 }
