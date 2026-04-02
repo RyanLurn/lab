@@ -1,0 +1,38 @@
+{
+  "name": "@lab/axon-client",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bunx --bun vite dev",
+    "check-types": "bunx tsc --noEmit",
+    "lint": "bunx eslint --cache",
+    "lint:fix": "bunx eslint --cache --fix",
+    "check": "bun run check-types && bun run lint"
+  },
+  "dependencies": {
+    "@lab/ui": "workspace:*",
+    "@tanstack/react-router": "catalog:",
+    "lucide-react": "catalog:ui",
+    "react": "catalog:ui",
+    "react-dom": "catalog:ui",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@babel/core": "catalog:build",
+    "@lab/eslint": "workspace:*",
+    "@lab/typescript": "workspace:*",
+    "@rolldown/plugin-babel": "catalog:build",
+    "@tailwindcss/vite": "catalog:build",
+    "@tanstack/router-plugin": "catalog:build",
+    "@types/babel__core": "catalog:types",
+    "@types/bun": "catalog:types",
+    "@types/react": "catalog:types",
+    "@types/react-dom": "catalog:types",
+    "@vitejs/plugin-react": "catalog:build",
+    "babel-plugin-react-compiler": "catalog:build",
+    "eslint": "catalog:",
+    "tailwindcss": "catalog:ui",
+    "typescript": "catalog:",
+    "vite": "catalog:build"
+  }
+}

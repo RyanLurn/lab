@@ -19,6 +19,7 @@
       "scripts/*"
     ],
     "catalog": {
+      "@tanstack/react-router": "^1.168.10",
       "eslint": "^10.1.0",
       "typescript": "^6.0.2",
       "zod": "^4.3.6"
@@ -40,6 +41,7 @@
         "@babel/core": "^7.29.0",
         "@rolldown/plugin-babel": "^0.2.2",
         "@tailwindcss/vite": "^4.2.2",
+        "@tanstack/router-plugin": "^1.167.12",
         "@vitejs/plugin-react": "^6.0.1",
         "babel-plugin-react-compiler": "^1.0.0",
         "tsdown": "^0.21.7",
