@@ -39,6 +39,21 @@
         "vite": "catalog:build",
       },
     },
+    "axon/server": {
+      "name": "@lab/axon-server",
+      "dependencies": {
+        "@lab/core": "workspace:*",
+        "hono": "catalog:",
+        "zod": "catalog:",
+      },
+      "devDependencies": {
+        "@lab/eslint": "workspace:*",
+        "@lab/typescript": "workspace:*",
+        "@types/bun": "catalog:types",
+        "eslint": "catalog:",
+        "typescript": "catalog:",
+      },
+    },
     "configs/eslint": {
       "name": "@lab/eslint",
       "devDependencies": {
@@ -112,6 +127,7 @@
   "catalog": {
     "@tanstack/react-router": "^1.168.10",
     "eslint": "^10.1.0",
+    "hono": "^4.12.9",
     "typescript": "^6.0.2",
     "zod": "^4.3.6",
   },
@@ -319,6 +335,8 @@
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.31", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw=="],
 
     "@lab/axon-client": ["@lab/axon-client@workspace:axon/client"],
+
+    "@lab/axon-server": ["@lab/axon-server@workspace:axon/server"],
 
     "@lab/core": ["@lab/core@workspace:packages/core"],
 

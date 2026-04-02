@@ -1,0 +1,24 @@
+{
+  "name": "@lab/axon-server",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun --watch run src/index.ts",
+    "check-types": "bunx tsc --noEmit",
+    "lint": "bunx eslint --cache",
+    "lint:fix": "bunx eslint --cache --fix",
+    "check": "bun run check-types && bun run lint"
+  },
+  "dependencies": {
+    "@lab/core": "workspace:*",
+    "hono": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@lab/eslint": "workspace:*",
+    "@lab/typescript": "workspace:*",
+    "@types/bun": "catalog:types",
+    "eslint": "catalog:",
+    "typescript": "catalog:"
+  }
+}
