@@ -4,6 +4,23 @@ import { UserThemeSchema } from "@/features/theme/schemas";
 
 export const THEME_STORAGE_KEY = "ui-theme";
 
+export function handleThemeChange({ userTheme }: { userTheme: UserTheme }) {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  const root = document.documentElement;
+  root.classList.remove("light", "dark", "system");
+
+  const validTheme = UserThemeSchema.parse(userTheme);
+  if (validTheme === "system") {
+    const systemTheme = getSystemTheme();
+    root.classList.add(systemTheme, "system");
+  } else {
+    root.classList.add(validTheme);
+  }
+}
+
 export function getStoredTheme() {
   if (typeof window === "undefined") {
     return "system";
@@ -29,4 +46,15 @@ export function setStoredTheme({ theme }: { theme: UserTheme }) {
   } catch {
     return;
   }
+}
+
+export function getSystemTheme() {
+  if (typeof window === "undefined") {
+    return "light";
+  }
+
+  const matchedTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+  return matchedTheme;
 }
