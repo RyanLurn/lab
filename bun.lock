@@ -64,6 +64,7 @@
         "@lab/typescript": "workspace:*",
         "@types/bun": "catalog:types",
         "eslint": "catalog:",
+        "tsdown": "catalog:build",
         "typescript": "catalog:",
       },
     },

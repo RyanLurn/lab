@@ -3,14 +3,16 @@
   "type": "module",
   "private": "true",
   "scripts": {
+    "build": "bunx tsdown",
     "check-types": "bunx tsc --noEmit",
     "lint": "bunx eslint --cache",
     "lint:fix": "bunx eslint --cache --fix",
     "check": "bun run check-types && bun run lint"
   },
   "exports": {
-    "./types/*": {
-      "types": "./src/types/*.ts"
+    "./*": {
+      "import": "./dist/*.mjs",
+      "types": "./dist/*.d.mts"
     }
   },
   "devDependencies": {
@@ -18,6 +20,7 @@
     "@lab/typescript": "workspace:*",
     "@types/bun": "catalog:types",
     "eslint": "catalog:",
+    "tsdown": "catalog:build",
     "typescript": "catalog:"
   }
 }
