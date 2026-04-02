@@ -1,5 +1,5 @@
 {
-  "name": "@home/ui",
+  "name": "@lab/ui",
   "type": "module",
   "private": true,
   "exports": {
