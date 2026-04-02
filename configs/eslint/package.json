@@ -12,15 +12,21 @@
     "./bun": {
       "import": "./src/configs/bun.js",
       "types": "./src/configs/bun.d.ts"
+    },
+    "./browser": {
+      "import": "./src/configs/browser.js",
+      "types": "./src/configs/browser.d.ts"
     }
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@lab/typescript": "workspace:*",
+    "@tanstack/eslint-plugin-router": "^1.161.6",
     "@types/bun": "catalog:types",
     "eslint": "catalog:",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-perfectionist": "^5.7.0",
+    "eslint-plugin-react-hooks": "^7.0.1",
     "globals": "^17.4.0",
     "typescript": "catalog:",
     "typescript-eslint": "^8.57.2"
