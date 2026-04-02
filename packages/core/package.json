@@ -15,6 +15,9 @@
       "types": "./dist/*.d.mts"
     }
   },
+  "dependencies": {
+    "serialize-error": "^13.0.1"
+  },
   "devDependencies": {
     "@lab/eslint": "workspace:*",
     "@lab/typescript": "workspace:*",
