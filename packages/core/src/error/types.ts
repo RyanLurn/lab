@@ -19,3 +19,5 @@ export interface UnknownError extends CustomError {
   code: "UNKNOWN_ERROR";
   cause: SerializedUnknown;
 }
+
+export type { ErrorObject };
