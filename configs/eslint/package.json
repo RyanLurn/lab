@@ -16,6 +16,10 @@
     "./browser": {
       "import": "./src/configs/browser.js",
       "types": "./src/configs/browser.d.ts"
+    },
+    "./isomorphic": {
+      "import": "./src/configs/isomorphic.js",
+      "types": "./src/configs/isomorphic.d.ts"
     }
   },
   "devDependencies": {
