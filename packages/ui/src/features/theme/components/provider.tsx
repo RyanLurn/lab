@@ -1,0 +1,52 @@
+import type { ReactNode } from "react";
+
+import { useEffect, useState } from "react";
+
+import type { UserTheme } from "@/features/theme/schemas";
+
+import {
+  handleThemeChange,
+  getSystemTheme,
+  getStoredTheme,
+  setStoredTheme,
+} from "@/features/theme/utils";
+import { UserThemeSchema } from "@/features/theme/schemas";
+import { ThemeContext } from "@/features/theme/context";
+
+export function ThemeProvider({ children }: { children: ReactNode }) {
+  const [userTheme, setUserTheme] = useState<UserTheme>(getStoredTheme());
+
+  useEffect(() => {
+    if (userTheme !== "system") {
+      return;
+    }
+
+    function systemThemeChangeHandler() {
+      handleThemeChange({ userTheme: "system" });
+    }
+
+    const mediaQueryList = window.matchMedia("(prefers-color-scheme: dark)");
+    mediaQueryList.addEventListener("change", systemThemeChangeHandler);
+
+    return () => {
+      mediaQueryList.removeEventListener("change", systemThemeChangeHandler);
+    };
+  }, [userTheme]);
+
+  const appTheme = userTheme === "system" ? getSystemTheme() : userTheme;
+
+  function setTheme(newUserTheme: UserTheme) {
+    const newValidTheme = UserThemeSchema.parse(newUserTheme);
+
+    handleThemeChange({ userTheme: newValidTheme });
+    setUserTheme(newValidTheme);
+
+    setStoredTheme({ theme: newValidTheme });
+  }
+
+  return (
+    <ThemeContext value={{ userTheme, appTheme, setTheme }}>
+      {children}
+    </ThemeContext>
+  );
+}
