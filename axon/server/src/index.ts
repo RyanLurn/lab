@@ -1,7 +1,13 @@
 import { upgradeWebSocket } from "hono/bun";
 import { Hono } from "hono";
+import { z } from "zod";
 
+import { ChatMessageSchema } from "@/mock-db/schema";
 import { db } from "@/mock-db";
+
+export const EnvelopeSchema = z.discriminatedUnion("type", [
+  z.object({ newMessage: ChatMessageSchema, type: "NEW_MESSAGE" }),
+]);
 
 export const app = new Hono()
   .get("/", (context) => context.text("Hello Bun!"))
