@@ -1,7 +1,9 @@
-export function serializeUnknown(data: unknown): {
+export interface SerializedUnknown {
   value: unknown;
   type: string;
-} {
+}
+
+export function serializeUnknown(data: unknown): SerializedUnknown {
   // Null / undefined
   if (data === null || data === undefined) {
     return { value: String(data), type: "nullish" };
