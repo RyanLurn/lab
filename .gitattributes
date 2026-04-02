@@ -2,9 +2,14 @@
 * text=auto eol=lf
 
 # Force GitHub to treat the these folders as source code
+axon/** linguist-vendored=false
+axon/** linguist-documentation=false
+axon/** linguist-generated=false
+
 configs/** linguist-vendored=false
 configs/** linguist-documentation=false
 configs/** linguist-generated=false
+
 scripts/** linguist-vendored=false
 scripts/** linguist-documentation=false
 scripts/** linguist-generated=false

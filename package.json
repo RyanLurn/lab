@@ -13,6 +13,7 @@
   "workspaces": {
     "packages": [
       "apps/*",
+      "axon/*",
       "configs/*",
       "packages/*",
       "scripts/*"
