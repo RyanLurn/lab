@@ -51,7 +51,7 @@ function ChatPage() {
   }
 
   return (
-    <div className="mx-auto flex size-full max-w-2xl flex-col items-center pt-5">
+    <div className="mx-auto flex size-full max-w-2xl flex-col items-center pt-5 text-lg">
       <MessageList chatMessages={chatMessages} />
       <PromptBox sendUserMessage={sendUserMessage} />
     </div>
